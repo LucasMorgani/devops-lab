@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-cluster-ip
+  namespace: prometheus
+spec:
+  selector:
+    app: prometheus
+  ports:
+  - name: grafana-scraping
+    port: 9090 #Porta da API do prometheus
+    targetPort: 9090 #Porta da API do prometheus
+  type: ClusterIP

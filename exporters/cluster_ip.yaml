@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blackbox-cluster-ip
+  namespace: exporters
+spec:
+  selector:
+    app: blackbox-exporter
+  ports:
+  - name: prometheus-scraping
+    port: 9115 #Porta que o prometheus pega os dados
+    targetPort: 9115 #Porta que o prometheus pega os dados
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-exporter-cluster-ip
+  namespace: exporters
+spec:
+  selector:
+    app: node-exporter
+  ports:
+  - name: prometheus-scraping
+    port: 9100 #Porta que o prometheus pega os dados
+    targetPort: 9100 #Porta que o prometheus pega os dados
+  type: ClusterIP
