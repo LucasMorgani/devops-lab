@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: prometheus-cluster-ip
+  name: prometheus-service
   namespace: prometheus
 spec:
   selector:

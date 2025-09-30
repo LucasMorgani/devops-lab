@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: blackbox-cluster-ip
+  name: blackbox-service
   namespace: exporters
 spec:
   selector:
@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-exporter-cluster-ip
+  name: node-exporter-service
   namespace: exporters
 spec:
   selector:

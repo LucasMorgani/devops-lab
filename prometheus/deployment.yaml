@@ -6,7 +6,7 @@ metadata:
   name: prometheus-deploy
   namespace: prometheus
 spec:
-  strategy: #Setando estratégia de atualização
+  strategy: #Setando estratégia de atualização (rollingUpdate)
     rollingUpdate:
       maxSurge: 50%
       maxUnavailable: 50%
