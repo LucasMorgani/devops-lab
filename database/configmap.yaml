@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: database-configmap
-  namespace: database
-data:
-  POSTGRES_DB: database_test
