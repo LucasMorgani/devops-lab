@@ -1,0 +1,10 @@
+#Pre-commit para evitar que os códigos sejam commitados com erros de formatação/validação
+repos:
+- repo: https://github.com/antonbabenko/pre-commit-terraform  #Repositório do pre-commit
+  rev: v1.100.0 #Versão do pre-commit
+  hooks:
+  - id: terraform_fmt #Hook utilizado (comando 'terraform fmt' com a flag -recursive)
+    args:
+      - --args=-recursive
+  - id: terraform_validate #Hook utilizado (comando 'terraform validate')
+#----
