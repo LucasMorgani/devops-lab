@@ -25,9 +25,10 @@ module "eks_mng" {
 }
 #eks_aws_lb_controller
 module "eks_aws_lb_controller" {
-  source       = "./modules/aws-lb-controller"
-  project_name = var.project_name
-  tags         = local.tags
-  oidc         = module.eks_cluster.oidc
+ source       = "./modules/aws-lb-controller"
+ project_name = var.project_name
+ tags         = local.tags
+ oidc         = module.eks_cluster.oidc
+ cluster_name = module.eks_cluster.cluster_name
 }
 #----
